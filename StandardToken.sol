@@ -14,11 +14,11 @@ contract StandardToken is ERC20 {
     mapping (address => uint256) internal balances;
     mapping (address => mapping (address => uint256)) internal allowed;
 
-    function StandardToken(string name, string symbol, uint8 decimals, uint256 totalSupply) public {
-        _symbol = symbol;
-        _name = name;
-        _decimals = decimals;
-        _totalSupply = totalSupply;
+    function StandardToken() public {
+        _symbol = "SNY";
+        _name = "SparkCoin";
+        _decimals = 2;
+        _totalSupply = 1000000;
         balances[msg.sender] = totalSupply;
     }
 
